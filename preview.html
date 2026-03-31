@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>黄金策略交易官网预览</title>
+    <style>
+      :root { --bg:#07090f; --panel:rgba(17,20,31,.66); --text:#eff2fb; --muted:#9da6be; --gold:#ffd76a; --gold-strong:#f8a936; --border:rgba(255,255,255,.12); }
+      *{box-sizing:border-box} html,body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 20% 20%,#101727,#07090f 55%);scroll-behavior:smooth}
+      body{min-height:100vh;overflow-x:hidden} #starfield{position:fixed;inset:0;z-index:-2}
+      .bg-orb{position:fixed;width:340px;aspect-ratio:1;border-radius:999px;filter:blur(80px);opacity:.24;z-index:-1;animation:drift 14s ease-in-out infinite}
+      .orb-left{top:-80px;left:-90px;background:#ffd76a}.orb-right{right:-80px;bottom:10%;background:#5a8fff;animation-delay:3s}
+      @keyframes drift{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(40px) scale(1.09)}}
+      .container{width:min(1120px,92vw);margin:0 auto}.site-header{position:sticky;top:16px;z-index:15;margin:16px auto;width:min(1120px,92vw);border:1px solid var(--border);border-radius:18px;backdrop-filter:blur(10px)}
+      .nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:0 18px}.brand{color:var(--text);text-decoration:none;display:inline-flex;gap:10px;font-weight:700;align-items:center}
+      .brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-strong));color:#251708;font-size:12px}
+      nav{display:flex;gap:24px} nav a{color:var(--muted);text-decoration:none} nav a:hover{color:var(--text)}
+      .hero{padding:90px 0 56px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--gold);font-size:.78rem;font-weight:600}
+      h1{font-size:clamp(2.1rem,7vw,4.4rem);line-height:1.1;margin:.3rem 0 1rem;max-width:12ch}.gold{background:linear-gradient(120deg,#ffe8a5 0%,var(--gold) 50%,#ff9f2d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+      .subtitle{color:var(--muted);max-width:60ch;line-height:1.75}.cta-row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+      .btn{background:linear-gradient(135deg,var(--gold),var(--gold-strong));color:#261706;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:12px;border:none;cursor:pointer}
+      .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(248,169,54,.3)}.btn-sm{padding:9px 14px;font-size:.9rem}.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+      .hero-stats{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:22px}
+      .stat h3{margin:8px 0 0;font-size:2rem;display:inline-block}.stat span{color:var(--gold);margin-left:6px}.section{padding:42px 0}.section-title h2{margin:.2rem 0 .7rem;font-size:clamp(1.8rem,4vw,2.6rem)}
+      .grid{display:grid;gap:14px}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.chart-line{stroke-dasharray:1300;stroke-dashoffset:1300;animation:drawLine 3s ease forwards}
+      @keyframes drawLine{to{stroke-dashoffset:0}} .contact{text-align:center;padding:38px}.contact-form{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+      .contact-form input{min-width:280px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02);color:var(--text);padding:12px 14px}
+      .site-footer{color:var(--muted);text-align:center;padding:30px 0 42px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:translateY(0)}
+      .lift{transition:transform .25s ease,border-color .25s ease}.lift:hover{transform:translateY(-6px);border-color:rgba(255,215,106,.5)}
+      @media (max-width:900px){nav{display:none}.hero-stats,.grid-3{grid-template-columns:1fr}.site-header{top:8px}}
+    </style>
+  </head>
+  <body>
+    <div class="bg-orb orb-left"></div><div class="bg-orb orb-right"></div><canvas id="starfield"></canvas>
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="#home"><span class="brand-mark">AQ</span><span>Aurum Quant</span></a><nav><a href="#strategy">策略</a><a href="#performance">表现</a><a href="#risk">风控</a><a href="#contact">联系</a></nav><a href="#contact" class="btn btn-sm">申请演示</a></div></header>
+    <main id="home" class="container">
+      <section class="hero reveal"><p class="eyebrow">Global Gold Trading Intelligence</p><h1>重新定义 <span class="gold">黄金量化策略</span> 的全球标准</h1><p class="subtitle">多因子引擎 + 高频执行 + 机构级风险控制，打造面向全球市场的黄金策略交易系统。</p><div class="cta-row"><a href="#contact" class="btn">立即咨询</a><a href="#strategy" class="btn btn-ghost">查看策略架构</a></div>
+      <div class="hero-stats"><article class="stat card reveal"><p>年化目标</p><h3 class="counter" data-target="32">0</h3><span>%</span></article><article class="stat card reveal"><p>最大回撤控制</p><h3 class="counter" data-target="6.5">0</h3><span>%</span></article><article class="stat card reveal"><p>信号响应延迟</p><h3 class="counter" data-target="45">0</h3><span>ms</span></article></div></section>
+      <section id="strategy" class="section"><div class="section-title reveal"><p class="eyebrow">STRATEGY MATRIX</p><h2>策略引擎</h2></div><div class="grid grid-3"><article class="card reveal lift"><h3>Macro Pulse</h3><p>追踪美债实际利率、美元流动性与央行政策路径，识别黄金中周期趋势。</p></article><article class="card reveal lift"><h3>Micro Structure</h3><p>解析盘口深度、成交簇与波动状态，识别短周期突破与回归机会。</p></article><article class="card reveal lift"><h3>AI Sentiment</h3><p>实时提取全球财经新闻语义温度，动态调节仓位杠杆与对冲权重。</p></article></div></section>
+      <section id="performance" class="section"><div class="section-title reveal"><p class="eyebrow">PERFORMANCE</p><h2>策略表现曲线</h2></div><div class="card reveal"><svg viewBox="0 0 800 280"><defs><linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffd76a"/><stop offset="100%" stop-color="#f8a936"/></linearGradient></defs><polyline points="20,230 100,190 170,200 250,155 340,170 420,120 500,135 600,90 700,70 780,40" fill="none" stroke="url(#lineGrad)" stroke-width="5" stroke-linecap="round" class="chart-line"/></svg></div></section>
+      <section id="risk" class="section"><div class="section-title reveal"><p class="eyebrow">RISK SYSTEM</p><h2>三层风控闭环</h2></div><div class="grid grid-3"><article class="card reveal lift"><h3>Pre-Trade</h3><p>基于波动率场景与流动性压力模拟，动态设置订单限价与仓位上限。</p></article><article class="card reveal lift"><h3>In-Trade</h3><p>实时监控滑点、价差与成交偏离，触发自动减仓与执行路径重路由。</p></article><article class="card reveal lift"><h3>Post-Trade</h3><p>交易归因模型追踪 alpha 来源，持续迭代信号质量与风险预算模型。</p></article></div></section>
+      <section id="contact" class="section reveal"><div class="card contact"><h2>让你的黄金策略升级为全球级交易系统</h2><p>提交邮箱，获取策略白皮书与 1 对 1 架构咨询。</p><form class="contact-form" onsubmit="event.preventDefault()"><input type="email" placeholder="your@email.com" required/><button class="btn" type="submit">获取资料</button></form></div></section>
+    </main>
+    <footer class="site-footer"><p>© 2026 Aurum Quant. All Rights Reserved.</p></footer>
+    <script>
+      const reveals=document.querySelectorAll('.reveal');
+      const revealObserver=new IntersectionObserver((entries)=>entries.forEach((e)=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.2});
+      reveals.forEach((el)=>revealObserver.observe(el));
+      const counters=document.querySelectorAll('.counter');
+      const animateValue=(el,target)=>{const duration=1300,start=performance.now();const step=(now)=>{const p=Math.min((now-start)/duration,1),v=target*(1-Math.pow(1-p,3));el.textContent=Number.isInteger(target)?Math.round(v):v.toFixed(1);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)};
+      const counterObserver=new IntersectionObserver((entries,obs)=>entries.forEach((e)=>{if(e.isIntersecting){animateValue(e.target,Number(e.target.dataset.target));obs.unobserve(e.target)}}),{threshold:.5});
+      counters.forEach((c)=>counterObserver.observe(c));
+      const canvas=document.getElementById('starfield'),ctx=canvas.getContext('2d');let width,height,stars=[];
+      function resize(){width=canvas.width=innerWidth;height=canvas.height=innerHeight;stars=Array.from({length:Math.min(150,Math.floor(width*height/11000))},()=>({x:Math.random()*width,y:Math.random()*height,z:.2+Math.random()*.8}))}
+      function render(){ctx.clearRect(0,0,width,height);for(const s of stars){s.y+=s.z*.24;if(s.y>height){s.y=0;s.x=Math.random()*width}ctx.beginPath();ctx.arc(s.x,s.y,s.z*1.2,0,Math.PI*2);ctx.fillStyle=`rgba(255,220,150,${.4+s.z*.4})`;ctx.fill()}requestAnimationFrame(render)}
+      addEventListener('resize',resize);resize();render();
+    </script>
+  </body>
+</html>
